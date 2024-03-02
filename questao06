@@ -1,0 +1,33 @@
+/* 
+Atividade 06
+Escreva um programa que solicite um número e determine se ele é
+um número primo.
+*/
+
+var numero = prompt(`Digite um Numero inteiro e positivo !`)
+numero = parseInt(numero)
+
+if (numero <=1 ){
+    document.write(`Numeros Menores ou iguais a 1 não são primos !`)
+}
+else if (numero === 2){
+    document.write(`O numero 2 é Primo`)
+}  
+else if (numero %2 === 0 ){
+    document.write(`O numero: ${numero}, não é primo`)
+}
+else {
+    var divisores = 0
+    for (let i = 2; i <= numero; i++) {
+
+        if (numero % i === 0){
+            divisores += 1
+            if (divisores>2){
+                break
+            }
+        }
+    }
+    if (divisores === 1){ // pois esta começando com o numero 2 kk o laço
+        document.write(`O ${numero} é primo.`)
+    }
+}
