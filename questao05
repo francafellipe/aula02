@@ -1,0 +1,37 @@
+/* 
+Atividade 05
+Crie um programa que solicite um número de 1 a 7, representando
+o dia da semana. Use uma estrutura switch (ou equivalente) para
+imprimir o nome do dia correspondente.
+*/
+
+var numero = prompt(`Digite 1 Numero de 1 até 7`)
+numero = parseInt(numero)
+if (numero > 7 || numero < 1 || isNaN(numero)){
+    document.write(`Numero invalido digite um numero de 1 a 7`)
+}
+else {
+    switch (numero){
+        case 1:
+            document.write(`Hoje é Domingo`)
+            break
+        case 2:
+            document.write(`Hoje é segunda-feira`)
+            break
+        case 3 :
+            document.write(`hoje é terca-feira`)
+            break
+        case 4:
+            document.write(`hoje é quarte-feira`)
+            break
+        case 5:
+            document.write(`hoje é quinta-feira`)
+            break
+        case 6:
+            document.write(`hoje é sexta-feira`)
+            break
+        case 7:
+            document.write(`hoje é Sabado`)
+            break
+    }
+}
