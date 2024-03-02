@@ -1,0 +1,28 @@
+/* 
+Atividade 03
+Peça ao usuário para inserir o preço de um produto e sua idade. E calcule o
+preço final com desconto, Se o usuário tiver menos de 18 anos, aplique um
+desconto de 10%. Se o usuário tiver 18 anos ou mais, não aplique desconto.
+*/
+
+
+
+var valorProduto = prompt(`Qual o preço do Produto !`)
+valorProduto = parseFloat(valorProduto)
+
+var idade = prompt(`Qual a sua idade ?`)
+idade = (idade)
+
+if (isNaN(idade) || isNaN(valorProduto) || !Number.isInteger(idade) || idade < 0 || valorProduto <=0 || idade % 1 !== 0 ){
+    document.write(`Valores Inválidos , idade e preço devem ser maiorres que 0!`)
+}
+else {
+    if (idade < 18){
+        var desconto = (valorProduto/100)*10
+        var valorFinal = valorProduto - desconto
+        document.write(`Você tem um desconto de R$ ${desconto.toFixed(2)}. O valor a ser pago é R$ ${valorFinal.toFixed(2)}.`)
+    }
+    else{
+        document.write(`RS ${valorProduto.toFixed(2)} preço a ser pago !`)
+    }
+}
