@@ -1,0 +1,15 @@
+/* 
+Atividade 01
+Peça ao usuário para inserir um número e escreva um programa que
+determine se o número é positivo e par.
+*/
+var numerodigitado = prompt(`Digite 1 Numero !`)
+
+numerodigitado= parseFloat(numerodigitado)
+
+if (!isNaN(numerodigitado) > 0 && numerodigitado % 2 == 0) {
+    document.write(`O numero : ${numerodigitado} é positivo e é par !`)
+}
+else {
+    document.write (`O numero é impar ou negativo ou invalido !`)
+}
